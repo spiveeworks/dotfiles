@@ -1,0 +1,2 @@
+#!/bin/sh
+du -amd 1 | sort -nk 1
