@@ -1,0 +1,45 @@
+! taken from https://www.askapache.com/linux/rxvt-xresources/
+!urxvt*termName: screen-256color
+!urxvt*geometry: 240x84
+!urxvt*loginShell: true
+!urxvt*scrollColor: #777777
+!urxvt*scrollstyle: plain
+!urxvt*scrollTtyKeypress: true
+!urxvt*scrollTtyOutput: false
+!urxvt*scrollWithBuffer: false
+!urxvt*secondaryScreen: true
+!urxvt*secondaryScroll: true
+!urxvt*skipScroll: true
+urxvt*scrollBar: false
+!urxvt*scrollBar_right: false
+!urxvt*scrollBar_floating: false
+!urxvt*fading: 30
+!urxvt*utmpInhibit: false
+!urxvt*urgentOnBell: false
+!urxvt*visualBell: true
+!urxvt*mapAlert: true
+!urxvt*mouseWheelScrollPage: false
+urxvt*background: Black
+urxvt*foreground: White
+!urxvt*colorUL: yellow
+!urxvt*underlineColor: yellow
+
+!urxvt*font: 7x14
+!urxvt*boldFont: 7x14bold
+! more powerline fonts at
+! https://github.com/sjas/powerline-fonts-sjas/tree/master/powerline-more-fonts/unix_fonts/fonts
+urxvt*font: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-2
+urxvt*boldFont: -misc-fixed-bold-r-normal-sans-14-130-75-75-c-70-iso8859-2
+
+
+!urxvt*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
+!urxvt*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
+!urxvt*italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
+!urxvt*boldItalicFont: xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
+!urxvt*saveLines: 0
+!urxvt*buffered: true
+!urxvt*hold: false
+!urxvt*internalBorder:
+!urxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+!urxvt*perl-ext-common:
+!urxvt*perl-ext:

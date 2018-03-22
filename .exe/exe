@@ -1,0 +1,38 @@
+#!/bin/sh
+
+if [[ "$1" = /* ]] || [[ "$1" = .* ]]
+then
+    y="$1"
+else
+    y="/usr/local/bin/$1"
+fi
+
+if [ -f "$y" ]
+then
+    x="$y"
+else
+    x="/tmp/$RANDOM.exe"
+    touch_path "$x"
+    if [ -f ~/.config/exe_template ]
+    then
+        cp ~/.config/exe_template "$x"
+    else
+        touch "$x"
+    fi
+    chmod a+x "$x"
+fi
+
+move_edit() {
+    if [ "$x" != "$y" ]
+    then
+        $2 mv "$x" "$y"
+    fi
+    exec $2 "$1" "$y"
+}
+
+if [ -w `dirname "$y"` ]
+then
+    move_edit ~/bin/editor
+else
+    move_edit ~/bin/editor sudo
+fi

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+move-diary-files  # will test if we're online
+
+date_dir=`date +'/keybase/private/spivee/diary/%Y/%m %B'`
+date_file=`date +'%d %A'`
+
+mkdir -p "$date_dir"
+
+win_date_file=`ls -t1 "$date_dir/$date_file.*" 2>/dev/null | head -1`
+
+if [ ! -z "$win_date_file" ]
+then
+	date_file="$win_date_file"
+fi
+
+my editor "$date_dir/$date_file"

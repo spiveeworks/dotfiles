@@ -1,0 +1,10 @@
+#!/bin/sh
+pd=`pwd`
+for a in "$@"
+do
+    cd /tmp
+    git clone "https://aur.archlinux.org/$a.git"
+    cd "$a"
+    makepkg -si
+done
+cd "$pd"

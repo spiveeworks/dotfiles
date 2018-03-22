@@ -1,0 +1,12 @@
+#/bin/sh
+for x in "$@"
+do
+    for y in `ls -AR "$x"`
+    do
+        if [ -f "$x" ]
+        then
+            dos2unix -- "$x"
+	fi
+    done
+done
+

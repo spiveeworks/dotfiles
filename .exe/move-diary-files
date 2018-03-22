@@ -1,0 +1,3 @@
+#!/bin/sh
+ls -Ld '/keybase/private/spivee/diary' 2> /dev/null || exit
+mv -t '/keybase/private/spivee/diary' ~/.diary-offline/*

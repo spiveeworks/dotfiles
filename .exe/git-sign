@@ -1,0 +1,8 @@
+#!/bin/sh
+arg="$1"
+if [ -z "$arg" ]
+then
+	arg=true
+fi
+
+exec git config commit.gpgsign "$arg"

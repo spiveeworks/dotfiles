@@ -1,0 +1,2 @@
+#/bin/sh
+exec detached wine 'C:\Program Files (x86)\Cultris II\Cultris II.exe'

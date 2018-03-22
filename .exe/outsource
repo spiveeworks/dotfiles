@@ -1,0 +1,9 @@
+#!/bin/sh
+prevdir=`pwd`
+
+cd /usr/lib
+cp -r "$1" /home/sw/.lib/
+mv "$1" "$1"2
+ln -s "/home/sw/.lib/$1" "$1"
+
+cd "$prevdir"

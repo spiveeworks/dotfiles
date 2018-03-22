@@ -1,0 +1,18 @@
+#/bin/bash
+
+get_one() {
+    cat ~/wordlist.asc |\
+    tail -n+3 |\
+    head -n "$1" |\
+    tail -n1 |\
+    cut -d '	' -f 2
+}
+
+get_all() {
+    for x in "$@"
+    do
+        get_one "$((0x${x} + 1))"
+    done
+}
+
+echo `get_all "$@"`
