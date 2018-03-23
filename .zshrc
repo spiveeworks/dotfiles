@@ -22,6 +22,11 @@ autoload -Uz promptinit
 promptinit
 prompt steeef
 
+# display size of /tmp, as a reminder
+# (move important things out... also maybe dont let it get too big?)
+echo /tmp has:
+tmpsize
+
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     startx
 fi

@@ -1,0 +1,6 @@
+#!/bin/sh
+# size of /tmp
+numfiles=`ls -1 /tmp 2>/dev/null | wc -l`
+size=`df /tmp --human-readable --output=used | tail -n1`
+
+echo "$numfiles files,$size"
