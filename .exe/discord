@@ -1,3 +1,3 @@
 #!/bin/sh
-cd /home/sw/Discord
+cd /usr/local/lib/Discord
 exec ./Discord
