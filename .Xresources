@@ -24,12 +24,14 @@ urxvt*foreground: White
 !urxvt*colorUL: yellow
 !urxvt*underlineColor: yellow
 
-!urxvt*font: 7x14
+urxvt*font: 7x14,fixed
 !urxvt*boldFont: 7x14bold
+!urxvt*font:             -*-fixed-medium-r-*-*-13-*-*-*-*-60-iso10646-1
+!urxvt*boldFont:         -*-fixed-medium-r-*-*-13-*-*-*-*-60-iso10646-1
 ! more powerline fonts at
 ! https://github.com/sjas/powerline-fonts-sjas/tree/master/powerline-more-fonts/unix_fonts/fonts
-urxvt*font: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-2
-urxvt*boldFont: -misc-fixed-bold-r-normal-sans-14-130-75-75-c-70-iso8859-2
+!urxvt*font: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-2
+!urxvt*boldFont: -misc-fixed-bold-r-normal-sans-14-130-75-75-c-70-iso8859-2
 
 
 !urxvt*font: -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
