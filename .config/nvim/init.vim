@@ -11,3 +11,4 @@ set listchars=tab:␉·,trail:·,nbsp:⎵
 
 
 inoremap ww :w
+inoremap {} {}O	
