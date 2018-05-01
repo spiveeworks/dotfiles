@@ -9,7 +9,7 @@ then
 fi
 
 date_dir_=`date +'%Y/%m %B'`
-date_dir="$path/$dir/$date_dir"
+date_dir="$path/$dir/$date_dir_"
 date_file=`date +'%d %A'`
 
 mkdir -p "$date_dir"
