@@ -1,6 +1,6 @@
 #!/bin/sh
 
-path='~/.diary'
+path=~/.diary
 
 dir=$1
 if [ -z "$dir" ]
