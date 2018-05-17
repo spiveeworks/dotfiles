@@ -2,3 +2,5 @@
 	email = spiveehere@gmail.com
 	name = SpiveeWorks
 	signingkey = 00D3A3A7F18A5ABE
+[core]
+	editor = my editor
