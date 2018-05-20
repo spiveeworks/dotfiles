@@ -13,3 +13,10 @@ inoremap ww :w
 inoremap {} {}O
 inoremap {}, {},O
 inoremap {}; {};O
+
+
+au BufNewFile,BufRead *.lalrpop set filetype=rust
+
+
+command! Sinit execute "source ~/.config/nvim/init.vim"
+command! Einit execute "edit ~/.config/nvim/init.vim"
