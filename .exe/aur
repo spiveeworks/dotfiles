@@ -1,10 +1,18 @@
 #!/bin/sh
 pd=`pwd`
+cd ~/.aur || >&2 echo "No .aur directory, using `pwd`"
+wd=`pwd`
 for a in "$@"
 do
-    cd /tmp
-    git clone "https://aur.archlinux.org/$a.git"
-    cd "$a"
+    cd "$wd"
+    if [ -d $a ]
+    then
+        cd "$a"
+        git pull
+    else
+        git clone "https://aur.archlinux.org/$a.git"
+        cd "$a"
+    fi
     makepkg -si
 done
 cd "$pd"
