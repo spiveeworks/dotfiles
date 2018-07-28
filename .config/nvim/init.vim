@@ -6,8 +6,13 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+set textwidth=79
+set formatoptions=tcqj " nvim default
+
 set list
 set listchars=tab:␉·,trail:·,nbsp:⎵
+
+let @q="oo^ly$p^xpplp^ly$p^xpplp"
 
 inoremap ww :w
 inoremap {} {}O
