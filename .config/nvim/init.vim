@@ -15,6 +15,9 @@ set listchars=tab:␉·,trail:·,nbsp:⎵
 highlight link ALEError Error
 highlight link ALEWarning Todo
 
+nmap <silent> <C-k> :ALENext<cr>
+nmap <silent> <C-j> :ALEPrevious<cr>
+
 let @q="oo^ly$p^xpplp^ly$p^xpplp"
 
 inoremap ww :w
