@@ -12,6 +12,9 @@ set formatoptions=tcqj " nvim default
 set list
 set listchars=tab:␉·,trail:·,nbsp:⎵
 
+highlight link ALEError Error
+highlight link ALEWarning Todo
+
 let @q="oo^ly$p^xpplp^ly$p^xpplp"
 
 inoremap ww :w
