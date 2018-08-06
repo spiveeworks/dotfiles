@@ -4,3 +4,6 @@
 	signingkey = 00D3A3A7F18A5ABE
 [core]
 	editor = my editor
+[filter "tabspace"]
+	smudge = expand --tabs=4 --initial
+	clean = unexpand --tabs=4 --first-only
