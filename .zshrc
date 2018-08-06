@@ -16,6 +16,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd notify
 bindkey -v '^?' backward-delete-char
+#bindkey -v '^?' backward-delete-char '^[OA' up-line-or-beginning-search '^[OB' down-line-or-beginning-search
 # End of lines configured by zsh-newuser-install
 
 autoload -Uz promptinit
