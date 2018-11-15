@@ -19,6 +19,13 @@ repository hackage.haskell.org
   -- root-keys:
   -- key-threshold: 3
 
+-- dynamic linking according to
+-- https://wiki.archlinux.org/index.php/haskell
+-- no thanks
+--library-vanilla: False
+--shared: True
+--executable-dynamic: True
+
 -- default-user-config:
 -- require-sandbox: False
 -- ignore-sandbox: False
@@ -37,11 +44,8 @@ world-file: /home/spivee/.cabal/world
 -- with-hc-pkg:
 -- program-prefix: 
 -- program-suffix: 
-library-vanilla: False
 -- library-profiling:
-shared: True
 -- static:
-executable-dynamic: True
 -- profiling:
 -- executable-profiling:
 -- profiling-detail:
