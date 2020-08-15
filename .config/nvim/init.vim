@@ -27,8 +27,7 @@ inoremap {}; {};O
 " easier to type, better interaction with `.`, but painful unresponsiveness
 noremap xx 2x
 noremap ss 2s
-" the following mapping is called the hard-wrap sledgehammer
-noremap <C-j> JAjx
+noremap <C-j> ^80lF s
 
 
 au BufNewFile,BufRead *.lalrpop set filetype=rust
