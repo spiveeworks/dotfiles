@@ -29,9 +29,9 @@ noremap xx 2x
 noremap ss 2s
 noremap <C-j> ^80lF s
 
+au BufNewFile,BufRead *.h set filetype=c
 
 au BufNewFile,BufRead *.lalrpop set filetype=rust
-
 
 command! Sinit execute "source ~/.config/nvim/init.vim"
 command! Einit execute "edit ~/.config/nvim/init.vim"
