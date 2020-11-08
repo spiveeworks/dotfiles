@@ -21,7 +21,10 @@ bindkey -v '^?' backward-delete-char
 
 autoload -Uz promptinit
 promptinit
-prompt steeef
+prompt steeef 2>/dev/null || PROMPT='%F{135}%n%f at %F{166}%m%f in %F{118}%~%f
+%(!.#.$) '
+
+export PATH=$PATH:~/.local/bin
 
 # display size of /tmp, as a reminder
 # (move important things out... also maybe dont let it get too big?)
@@ -31,3 +34,4 @@ tmpsize
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     startx
 fi
+
