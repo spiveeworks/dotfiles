@@ -21,8 +21,9 @@ bindkey -v '^?' backward-delete-char
 
 autoload -Uz promptinit
 promptinit
-prompt steeef 2>/dev/null || PROMPT='%F{135}%n%f at %F{166}%m%f in %F{118}%~%f
+PROMPT='%F{135}%n%f at %F{166}%m%f in %F{118}%~%f
 %(!.#.$) '
+prompt steeef >/dev/null
 
 export PATH=$PATH:~/.local/bin
 
