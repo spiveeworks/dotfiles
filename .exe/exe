@@ -1,38 +1,33 @@
 #!/bin/sh
 
-if [[ "$1" = /* ]] || [[ "$1" = .* ]]
+firstchar=`echo "$1" | cut -c 1`
+secondchar=`echo "$1" | cut -c 2`
+if [ "$firstchar" = "/" ] || [ "$secondchar" = "/" ]
 then
-    y="$1"
+    target="$1"
 else
-    y="/usr/local/bin/$1"
+    target="$HOME/.exe/$1"
 fi
 
-if [ -f "$y" ]
+if [ -w `dirname "$target"` ]
 then
-    x="$y"
+    prefix=
 else
-    x="/tmp/$RANDOM.exe"
-    touch_path "$x"
+    prefix=sudo
+fi
+
+if [ ! -f "$target" ]
+then
+    newfile="/tmp/$RANDOM.exe"
     if [ -f ~/.config/exe_template ]
     then
-        cp ~/.config/exe_template "$x"
+        cp ~/.config/exe_template "$newfile"
     else
-        touch "$x"
+        touch "$newfile"
     fi
-    chmod a+x "$x"
+    chmod a+x "$newfile"
+    $prefix mv "$newfile" "$target"
 fi
 
-move_edit() {
-    if [ "$x" != "$y" ]
-    then
-        $2 mv "$x" "$y"
-    fi
-    exec $2 "$1" "$y"
-}
-
-if [ -w `dirname "$y"` ]
-then
-    move_edit ~/bin/editor
-else
-    move_edit ~/bin/editor sudo
-fi
+editor="$HOME/bin/editor"
+exec $prefix "$editor" "$target"

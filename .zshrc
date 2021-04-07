@@ -25,7 +25,9 @@ PROMPT='%F{135}%n%f at %F{166}%m%f in %F{118}%~%f
 %(!.#.$) '
 prompt steeef >/dev/null
 
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.exe:~/.local/bin
+alias :e=nvim
+alias :q=exit
 
 # display size of /tmp, as a reminder
 # (move important things out... also maybe dont let it get too big?)
