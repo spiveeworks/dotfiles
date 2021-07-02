@@ -1,0 +1,6 @@
+#!/bin/sh
+for i in "$@"
+do
+	cp "$i.ours" "$i"
+	git merge-file --diff3 -L ours -L base -L theirs "$i" "$i.base" "$i.theirs"
+done

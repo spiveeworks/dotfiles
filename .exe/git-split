@@ -1,0 +1,11 @@
+#!/bin/sh
+for i in "$@"
+do
+	objs=`git ls-files --full-name --unmerged "$i" | cut --fields=2 --delimiter=\ `
+	base=`echo "$objs" | sed -n 1p`
+	ours=`echo "$objs" | sed -n 2p`
+	theirs=`echo "$objs" | sed -n 3p`
+	git show "$base" > "$i.base"
+	git show "$ours" > "$i.ours"
+	git show "$theirs" > "$i.theirs"
+done
