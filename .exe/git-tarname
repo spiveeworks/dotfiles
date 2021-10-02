@@ -1,0 +1,6 @@
+#!/bin/sh
+commit_date=`git show -s --format=%ci | cut -d' ' -f1`
+number=`find $1 -maxdepth 1 -name "$commit_date-*" -printf '.' | wc -m`
+number_padded=`printf "%02d" $number`
+subject=`git show -s --format=%s | sed 's/[ \/]/-/g'`
+echo "$1/$commit_date-$number_padded-$subject.tar"
